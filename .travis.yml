@@ -16,7 +16,7 @@ branches:
 
 
 before_install:
-  - rm -rf /home/travis/mc # establish cache
+#  - rm -rf /home/travis/mc # establish cache
   - if [ -d /home/travis/mc ] ; then export USE_CACHE=yes; echo "Use cache"; else export USE_CACHE=no; fi
   - ./travis/before_install.sh
   - export PATH=/home/travis/mc/bin:$PATH
