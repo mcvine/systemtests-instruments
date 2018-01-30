@@ -1,6 +1,8 @@
+import os
+here = os.path.dirname(__file__)
+os.chdir(here)
 
 def test():
-    import os
-    print os.path.abspath(os.curdir)
-    os.system("bash sim.sh")
+    if os.system("bash sim.sh"):
+        raise RuntimeError("Failed")
     return
