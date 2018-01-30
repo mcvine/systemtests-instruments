@@ -6,6 +6,7 @@ language: python
 cache:
   directories:
     - $HOME/mc
+    - $HOME/beam
 
 python:
   - 2.7
