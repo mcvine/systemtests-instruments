@@ -16,5 +16,6 @@ if [ ${USE_CACHE} == "no" ] ; then
 
     # install MC
     chmod +x miniconda.sh
+    rm -rf /home/travis/mc
     ./miniconda.sh -b -p /home/travis/mc
 fi
