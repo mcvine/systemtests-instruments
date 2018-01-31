@@ -4,9 +4,7 @@ set -e
 
 export GIT_FULL_HASH=`git rev-parse HEAD`
 
-if [ ${USE_CACHE} == "yes" ] ; then
-    source activate testenv
-else
+if [ ${USE_CACHE} == "no" ] ; then
     # install dependencies
     echo ${TRAVIS_PYTHON_VERSION}
     conda config --set always_yes true
@@ -19,4 +17,5 @@ else
     conda install -c mcvine/label/unstable mcvine mcvine.workflow mcvine.phonon
     conda install -c mantid mantid-framework
     conda install pytest
+    const install awscli
 fi

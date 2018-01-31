@@ -1,3 +1,6 @@
+# set "USE_CACHE=yes" in travis CI settings to use cache
+# set "USE_CACHE=no" to establish the cache
+
 sudo: false
 # dist: trusty
 
@@ -21,8 +24,6 @@ branches:
 
 
 before_install:
-#  - rm -rf /home/travis/mc # establish cache
-  - if [ -d /home/travis/mc ] ; then export USE_CACHE=yes; echo "Use cache"; else export USE_CACHE=no; fi
   - ./travis/before_install.sh
   - export PATH=/home/travis/mc/bin:$PATH
 
@@ -30,6 +31,7 @@ install:
   - ./travis/install.sh
 
 script:
+  - ./travis/getbeam.sh
   - ./travis/run-tests.sh
 
 notifications:

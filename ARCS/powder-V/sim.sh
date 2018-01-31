@@ -5,3 +5,6 @@ cd mysim
 rm -rf beam
 ln -s ~/beam/ARCS/100meV-n1e7 beam
 make NCOUNT=1e7 NODES=4
+cd -
+cp mysim/*.nxs .
+rm -rf mysim
