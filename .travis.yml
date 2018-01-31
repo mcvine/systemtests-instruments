@@ -1,6 +1,10 @@
 sudo: false
 # dist: trusty
 
+addons:
+  artifacts:
+    debug: true
+
 language: python
 
 cache:
