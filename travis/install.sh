@@ -17,5 +17,5 @@ if [ ${USE_CACHE} == "no" ] ; then
     conda install -c mcvine/label/unstable mcvine mcvine.workflow mcvine.phonon
     conda install -c mantid mantid-framework
     conda install pytest
-    const install awscli
+    conda install awscli
 fi
