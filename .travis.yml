@@ -32,7 +32,7 @@ install:
 
 script:
   - ./travis/getbeam.sh
-  - ./travis/run-tests.sh
+  - travis_wait 60 ./travis/run-tests.sh
 
 notifications:
   email:
