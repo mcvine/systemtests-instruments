@@ -10,6 +10,6 @@ cat log.create-nxs
 cat log.reduce
 ls
 aws s3 cp \
-    *.nxs s3://ndav-mcvine/systemtests-instruments/${TRAVIS_JOB_NUMBER}/ARCS/powder-V/ \
+    iqe.nxs s3://ndav-mcvine/systemtests-instruments/${TRAVIS_JOB_NUMBER}/ARCS/powder-V/iqe.nxs \
     --profile ${AWS_S3_PROFILE_NAME} 
 cd -
