@@ -20,4 +20,4 @@ if [ ${USE_CACHE} == "no" ] ; then
     conda install awscli
 fi
 
-python init_mantid_user_config.py
+python travis/init_mantid_user_config.py
