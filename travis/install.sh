@@ -19,3 +19,5 @@ if [ ${USE_CACHE} == "no" ] ; then
     conda install pytest
     conda install awscli
 fi
+
+python init_mantid_user_config.py
