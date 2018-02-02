@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os, shutil
+import numpy as np
 import histogram.hdf as hh
 
 ie = hh.load('ie.h5').I
