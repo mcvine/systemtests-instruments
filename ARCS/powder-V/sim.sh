@@ -2,18 +2,23 @@
 
 set -e
 
-conda list mcvine
+# conda list mcvine
 
+# create workflow
 mcvine workflow powder --instrument=ARCS --sample=V --workdir=mysim
 cd mysim
+# setup beam
 rm -rf beam
 ln -s ~/beam/ARCS/100meV beam
+# run simulation
 make NCOUNT=$NCOUNT NODES=$NODES BUFFER_SIZE=$BUFFER_SIZE
+# print outputs
 cat log.scatter
 cat log.create-nxs
 cat log.reduce
 ls
 
+# postprocess to get iqe.h5 and ie.h5
 cd -
 python post-process.py
 

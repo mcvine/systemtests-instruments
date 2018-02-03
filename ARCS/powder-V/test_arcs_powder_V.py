@@ -5,7 +5,7 @@ here = os.path.dirname(__file__)
 os.chdir(here)
 
 def test():
-    if os.system("NCOUNT=8e3 NODES=8 BUFFER_SIZE=1000 ./sim.sh"):
+    if os.system("NCOUNT=8e5 NODES=8 BUFFER_SIZE=1000 ./sim.sh"):
         raise RuntimeError("Failed")
     return
 
