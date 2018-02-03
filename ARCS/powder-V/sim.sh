@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 conda list mcvine
 
 mcvine workflow powder --instrument=ARCS --sample=V --workdir=mysim
@@ -20,9 +22,7 @@ plothist iqe.h5 --min=0 --output=iqe.png
 plothist ie.h5 --output=ie.png
 S3_DEST=s3://ndav-mcvine/${JOB_NAME}/${BUILD_NUMBER}/ARCS/powder-V
 S3_OPTS="--profile ${AWS_S3_PROFILE_NAME}"
-CMD="aws s3 cp iqe.png ${S3_DEST}/iqe.png ${S3_OPTS}"
-echo $CMD
-$CMD
+aws s3 cp iqe.png ${S3_DEST}/iqe.png ${S3_OPTS}
 aws s3 cp ie.png ${S3_DEST}/ie.png ${S3_OPTS}
 
 # validate result
