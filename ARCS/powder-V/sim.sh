@@ -18,7 +18,7 @@ python post-process.py
 # plot and save to S3
 plothist iqe.h5 --min=0 --output=iqe.png
 plothist ie.h5 --output=ie.png
-S3_DEST=s3://ndav-mcvine/systemtests-instruments/${BUILD_ID}/${BUILD_NUMBER}/ARCS/powder-V
+S3_DEST=s3://ndav-mcvine/${JOB_NAME}/${BUILD_NUMBER}/ARCS/powder-V
 S3_OPTS="--profile ${AWS_S3_PROFILE_NAME}"
 CMD="aws s3 cp iqe.png ${S3_DEST}/iqe.png ${S3_OPTS}"
 echo $CMD
