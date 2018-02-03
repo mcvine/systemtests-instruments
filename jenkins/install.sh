@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# check these parameters!!!
+AWS_S3_ACCESS_ID=AKIAJ6RZWYBY6VPESDNQ
+AWS_S3_ACCESS_SECRET=SECRET
+AWS_S3_PROFILE_NAME=ndav_mcvine
+CORES=8
+
 set -e
 
 wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh;
@@ -21,9 +27,4 @@ conda install pytest
 conda install awscli
 
 python jenkins/init_mantid_user_config.py
-
-AWS_S3_ACCESS_ID=AKIAJ6RZWYBY6VPESDNQ
-AWS_S3_ACCESS_SECRET=SECRET
-AWS_S3_PROFILE_NAME=ndav_mcvine
-
-python setup-aws-testconfig.py
+python jenkins/setup-aws-testconfig.py

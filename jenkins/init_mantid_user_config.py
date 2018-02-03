@@ -8,6 +8,7 @@ def _createDefaultMantidUserConfig(facility='SNS'):
             os.makedirs(mantid_user_dir)
         with open(mantid_config_path, 'wt') as of:
             of.write('default.facility=%s\n' % facility)
+            of.write('MultiThreaded.MaxCores = %s\n' % os.environ['CORES'])
     return
 # this should be done before mantid is imported
 _createDefaultMantidUserConfig()
