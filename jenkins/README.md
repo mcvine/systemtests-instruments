@@ -2,4 +2,8 @@
 
 Modify and run `install.sh` to install necessary software in "jenkins" account.
 
-Jenkins project configuration makes use of `run-tests.py`.
+In Jenkins project configuration, build script is:
+
+./jenkins/getbeam.sh
+./jenkins/run-tests.sh
+
