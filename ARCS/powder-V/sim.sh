@@ -2,6 +2,10 @@
 
 set -e
 
+echo Hello
+echo $PWD
+exit 0
+
 # conda list mcvine
 
 # create workflow
