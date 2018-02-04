@@ -1,10 +1,7 @@
 #!/bin/bash
 
 set -e
-
-echo Hello
-echo $PWD
-exit 0
+echo "sim.sh in "$PWD
 
 # conda list mcvine
 
