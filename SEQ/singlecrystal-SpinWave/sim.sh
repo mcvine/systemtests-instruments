@@ -32,20 +32,20 @@ chmod +x run_scatter_angles.sh
 time ./run_scatter_angles.sh
 
 # reduce
-time mcvine workflow sxr reduce --type batch \
+time mcvine workflow sx reduce --type batch \
        --eaxis 0 90 0.5 --psi-axis -90 90.1 3. --eiguess 100 \
        --eventnxs work_%s/sim_%s.nxs --out reduced_%s.nxs\
        > log.reduce
 
 # get slice
-time mcvine workflow sxr slice \
+time mcvine workflow sx reduce slice \
      --sample ${STAGING_DIR}/sample.yml \
      --psi-axis -90 90.1 3. \
      --nxs reduced_%s.nxs \
      --slice ${STAGING_DIR}/slice_H00.yml \
      --out slice_H00.nxs \
      > log.slice_H00
-mcvine workflow sxr slice2hist slice_H00.nxs slice_H00.h5
+mcvine workflow sx reduce slice2hist slice_H00.nxs slice_H00.h5
 
 # plot and save to S3
 plothist slice_H00.h5 --min=0 --output=slice_H00.png

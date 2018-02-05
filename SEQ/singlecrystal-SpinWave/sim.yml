@@ -4,6 +4,6 @@ cluster:
 instrument:
   name: sequoia
 scatter:
-  ncount: 2e4
+  ncount: 1e5
   multiple_scattering: off
   template: ./template
