@@ -1,0 +1,9 @@
+
+cluster:
+  nodes: 8
+instrument:
+  name: sequoia
+scatter:
+  ncount: 1e5
+  multiple_scattering: off
+  template: ./template
