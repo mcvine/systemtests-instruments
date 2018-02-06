@@ -32,7 +32,7 @@ chmod +x run_scatter_angles.sh
 time ./run_scatter_angles.sh
 
 # reduce
-time mcvine workflow sx reduce --type batch \
+time mcvine workflow sx reduce tof2e --type batch \
        --eaxis 0 90 0.5 --psi-axis -90 90.1 3. --eiguess 100 \
        --eventnxs work_%s/sim_%s.nxs --out reduced_%s.nxs\
        > log.reduce
