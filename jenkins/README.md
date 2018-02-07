@@ -1,8 +1,10 @@
-# jenkins scripts
+# scripts to run at jenkins slaves to build this repo
 
-Modify and run `install.sh` to install necessary software in "jenkins" account.
+Modify and run `install.sh` to install necessary software in "jenkins" or "ec2-user" account.
+This should only need to be done once.
 
-In Jenkins project configuration, build script is:
+Then in a Jenkins build project configuration, the "Build" panel, the "Execute shell" sub-panel
+the "Command" is:
 
 ./jenkins/getbeam.sh
 ./jenkins/run-tests.sh

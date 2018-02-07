@@ -11,9 +11,10 @@ set -e
 wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh;
 # install MC
 chmod +x miniconda.sh
-rm -rf /home/jenkins/mc
-./miniconda.sh -b -p /home/jenkins/mc
-export PATH=/home/jenkins/mc/bin:$PATH
+MC_PREFIX=$HOME/mc  # /home/jenkins/mc or /home/ec2-user/mc etc
+rm -rf $MC_PREFIX
+./miniconda.sh -b -p $MC_PREFIX
+export PATH=$MC_PREFIX/bin:$PATH
 
 conda config --set always_yes true
 conda update conda
