@@ -1,8 +1,9 @@
 #!/bin/bash
 
-set -e
 echo "sim.sh in "$PWD
+rm -rf mysim
 
+set -e
 # conda list mcvine
 
 # create workflow

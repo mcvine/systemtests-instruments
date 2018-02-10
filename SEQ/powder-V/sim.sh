@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf mysim
 set -e
 
 # conda list mcvine

@@ -9,3 +9,6 @@ the "Command" is:
 ./jenkins/getbeam.sh
 ./jenkins/run-tests.sh
 
+The build uses jenkins env vars:
+* JOB_NAME
+* BUILD_NUMBER
