@@ -1,7 +1,6 @@
 #!/bin/bash
 
 rm -rf mysim
-set -e
 
 # conda list mcvine
 
@@ -12,13 +11,14 @@ cd mysim
 rm -rf beam
 ln -s ~/beam/SEQ/100meV beam
 # run simulation
-make NCOUNT=$NCOUNT NODES=$NODES BUFFER_SIZE=$BUFFER_SIZE QAXIS="$QAXIS"
-# print outputs
-cat log.scatter
-cat log.create-nxs
-cat log.reduce
-ls
+if make NCOUNT=$NCOUNT NODES=$NODES BUFFER_SIZE=$BUFFER_SIZE QAXIS="$QAXIS" ; then
+    ls
+else
+    cat log.scatter log.create-nxs log.reduce
+    exit 1
+fi
 
+set -e
 # postprocess to get iqe.h5 and ie.h5
 cd -
 python post-process.py
