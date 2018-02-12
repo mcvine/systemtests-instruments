@@ -8,7 +8,7 @@ export PATH=$HOME/mc/bin:$PATH
 source activate testenv
 
 conda remove mcvine    # remove old installations
-rm -f $HOME/mc/pkgs/mcvine*
+rm -rf $HOME/mc/pkgs/mcvine*
 conda install -c mcvine/label/unstable mcvine
 
 export AWS_S3_PROFILE_NAME=ndav_mcvine
