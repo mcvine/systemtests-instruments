@@ -7,6 +7,10 @@ echo "System testing of instruments"
 export PATH=$HOME/mc/bin:$PATH
 source activate testenv
 
+# with conda build of mantid 3.11, the virtual instrument definition
+# does not work yet. use mantid 3.10 for now
+conda install -c mantid mantid-framework=3.10
+
 conda remove mcvine    # remove old installations
 conda install -c mcvine/label/unstable mcvine-full
 
