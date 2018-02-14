@@ -12,7 +12,7 @@
 
     <!-- a simple kernel for elastic scattering. more realistic kernel exists. -->
     <E_Q_Kernel
-	E_Q="1"
+	E_Q="0"
 	S_Q="1"
 	Qmin="0./angstrom"
 	Qmax="16./angstrom"

@@ -1,8 +1,8 @@
 # slice_H00.yml
 Eaxis:
- min: 0
+ min: -20
  max: 90
- N: 181
+ N: 221
 Q_projections:
  U:
    proj: 1,0,0

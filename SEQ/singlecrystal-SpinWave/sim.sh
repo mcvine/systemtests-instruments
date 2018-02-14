@@ -34,14 +34,14 @@ time ./run_scatter_angles.sh
 
 # reduce
 time mcvine workflow sx reduce tof2e --type batch \
-       --eaxis 0 90 0.5 --psi-axis -90 90.1 3. --eiguess 100 \
-       --eventnxs work_%s/sim_%s.nxs --out reduced_%s.nxs\
-       > log.reduce
+     --eaxis -20 90 0.5 --psi-axis -90 90.1 15. \
+     --eventnxs work_%s/sim_%s.nxs --out reduced_%s.nxs\
+     > log.reduce
 
 # get slice
 time mcvine workflow sx reduce slice \
      --sample ${STAGING_DIR}/sample.yml \
-     --psi-axis -90 90.1 3. \
+     --psi-axis -90 90.1 15. \
      --nxs reduced_%s.nxs \
      --slice ${STAGING_DIR}/slice_H00.yml \
      --out slice_H00.nxs \
