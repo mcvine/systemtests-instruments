@@ -16,5 +16,5 @@ conda install -c mcvine/label/exp mcvine
 
 export AWS_S3_PROFILE_NAME=ndav_mcvine
 # py.test -s
-# python SEQ/singlecrystal-SpinWave/test_singlecrystal_SpinWave.py
-python SEQ/powder-V/test_seq_powder_V.py
+python SEQ/singlecrystal-SpinWave/test_singlecrystal_SpinWave.py
+# python SEQ/powder-V/test_seq_powder_V.py
