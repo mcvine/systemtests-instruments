@@ -5,7 +5,7 @@ echo "System testing of instruments"
 export PATH=$HOME/mc/bin:$PATH
 source activate testenv
 
-conda remove mcvine    # remove old installations
+conda remove mcvine-core    # remove old installations
 rm -rf $HOME/mc/pkgs/mcvine*
 
 
