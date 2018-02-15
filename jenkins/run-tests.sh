@@ -13,7 +13,6 @@ set -e
 conda config --add channels mantid  # need mantid-framework
 conda install -c mcvine/label/unstable mcvine
 conda list mcvine
-exit 0
 
 export AWS_S3_PROFILE_NAME=ndav_mcvine
 py.test -s
