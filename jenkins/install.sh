@@ -27,5 +27,5 @@ conda install -c mantid mantid-framework
 conda install pytest
 conda install awscli
 
-python jenkins/init_mantid_user_config.py
-python jenkins/setup-aws-testconfig.py
+python init_mantid_user_config.py
+python setup-aws-testconfig.py
