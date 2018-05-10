@@ -19,6 +19,7 @@ export PATH=$MC_PREFIX/bin:$PATH
 conda config --set always_yes true
 conda update conda
 conda config --add channels conda-forge
+conda config --add channels diffpy
 conda config --add channels mcvine
 conda create -n testenv python=2
 source activate testenv
