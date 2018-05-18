@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE scatterer>
+
+<!-- weights: absorption, scattering, transmission -->
+<homogeneous_scatterer 
+  mcweights="0, 1, 0.1"
+  max_multiplescattering_loops="3"
+  packing_factor="1.0"
+  >
+  
+  <KernelContainer average="yes">
+
+
+    <!-- a simple kernel for elastic scattering. more realistic kernel exists. -->
+    <E_Q_Kernel 
+	E_Q="1" 
+	S_Q="1"
+	Qmin="0./angstrom"
+	Qmax="16./angstrom"
+	/>
+
+
+    <E_Q_Kernel 
+       E_Q="20.*sin(Q*.4*3.1416)^2" 
+       S_Q="1" 
+       Qmin="5e+08*m**-1"
+       Qmax="1e+11*m**-1"
+       />
+
+    
+  </KernelContainer>
+  
+</homogeneous_scatterer>
