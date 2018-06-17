@@ -2,16 +2,21 @@
 
 echo "System testing of instruments"
 
+set -x
+
+# remove old downloads
+rm -rf $HOME/mc/pkgs/mcvine*
+sleep 5
+
 export PATH=$HOME/mc/bin:$PATH
 source activate testenv
 
 conda remove mcvine-core    # remove old installations
-rm -rf $HOME/mc/pkgs/mcvine*
-
+sleep 5
 
 set -e
 conda config --add channels mantid  # need mantid-framework
-conda install mcvine-core
+# conda install mcvine-core
 conda install -c mcvine/label/unstable mcvine
 # conda install -c mcvine/label/unstable --force mcvine-core
 conda list mcvine
