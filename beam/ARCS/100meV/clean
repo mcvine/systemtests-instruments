@@ -1,0 +1,6 @@
+rm -f README.*
+rm -f arcs_mod*2sample.pml
+rm -f mcvine-instruments-arcs-*.params mon*.dat
+rm -f log.*
+rm -rf out simapp-*
+rm -rf _m2sout
