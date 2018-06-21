@@ -1,0 +1,6 @@
+rm -f README.*
+rm -f hyspec*.pml
+rm -f mcvine-instruments-hyspec-*.params Mon*.dat
+rm -f log.*
+rm -rf out simapp-*
+rm -rf _m2sout

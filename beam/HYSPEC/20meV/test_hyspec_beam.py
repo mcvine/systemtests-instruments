@@ -6,7 +6,7 @@ def test():
     here = os.path.dirname(__file__) or '.'
     print here
     os.chdir(here)
-    cmd = 'mcvine instruments hyspec beam --ncount=1e6 --nodes=8'
+    cmd = 'mcvine instruments hyspec beam -E=20 --ncount=1e6 --nodes=8'
     if os.system(cmd):
         raise RuntimeError("Failed")
     return
