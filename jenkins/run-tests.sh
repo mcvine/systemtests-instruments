@@ -16,6 +16,7 @@ sleep 5
 
 set -e
 conda config --add channels mantid  # need mantid-framework
+conda update mcvine-resources
 # conda install mcvine-core
 conda install -c mcvine/label/unstable mcvine
 # conda install -c mcvine/label/unstable --force mcvine-core
