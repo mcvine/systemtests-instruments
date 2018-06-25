@@ -12,7 +12,10 @@ rm -rf beam
 ln -s ~/beam/HYSPEC/20meV beam
 # run simulation
 if make NCOUNT=$NCOUNT NODES=$NODES BUFFER_SIZE=$BUFFER_SIZE QAXIS="$QAXIS" DETECTOR_VESSEL_ANGLE=$DETECTOR_VESSEL_ANGLE; then
+    echo "make exited without error"
+    echo "List the current work dir"
     ls
+    echo "-------------------------------------------------------"
 else
     cat log.scatter log.create-nxs log.reduce
     exit 1
@@ -33,3 +36,4 @@ aws s3 cp ie.png ${S3_DEST}/ie.png ${S3_OPTS}
 
 # validate result
 python validate.py
+echo "Validation completed ~~""
