@@ -33,4 +33,4 @@ aws s3 cp ie.png ${S3_DEST}/ie.png ${S3_OPTS}
 
 # validate result
 python validate.py
-echo "Validation completed ~~""
+echo "Validation completed ~~"

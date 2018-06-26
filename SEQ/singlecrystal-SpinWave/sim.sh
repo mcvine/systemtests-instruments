@@ -56,4 +56,4 @@ aws s3 cp slice_H00.png ${S3_DEST}/slice_H00.png ${S3_OPTS}
 
 # validate result
 python ${STAGING_DIR}/validate.py
-echo "Validation completed ~~""
+echo "Validation completed ~~"
