@@ -5,7 +5,7 @@ set -e
 echo "Get beam"
 
 export PATH=$HOME/mc/bin:$PATH
-source activate testenv
+source activate test
 
 THIS_SCRIPT_DIR=`dirname $0`
 python $THIS_SCRIPT_DIR/setup-aws-testconfig.py
