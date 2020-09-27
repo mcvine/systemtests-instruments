@@ -8,3 +8,5 @@ source activate test
 conda install -c mcvine/label/unstable mcvine pytest awscli
 conda list mcvine
 conda list mcvine-core
+THIS_SCRIPT_DIR=`dirname $0`
+python $THIS_SCRIPT_DIR/init_mantid_user_config.py
