@@ -14,4 +14,4 @@ which py.test
 python -c "import mcvine"
 mcvine
 
-# py.test -s
+py.test -s
