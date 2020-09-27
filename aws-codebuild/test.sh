@@ -5,7 +5,7 @@ set -e
 export PATH=$HOME/mc/bin:$PATH
 source activate test
 
-# export AWS_S3_PROFILE_NAME=ndav_mcvine
+# get beam data
 THIS_SCRIPT_DIR=`dirname $0`
 $THIS_SCRIPT_DIR/getbeam.sh
 
