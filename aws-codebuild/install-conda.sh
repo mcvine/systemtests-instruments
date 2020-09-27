@@ -11,5 +11,6 @@ export PATH=$HOME/mc/bin:$PATH
 which conda
 conda config --add channels conda-forge
 conda config --add channels diffpy
+conda config --add channels mantid
 conda config --add channels mcvine
 conda update conda
