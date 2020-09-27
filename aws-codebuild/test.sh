@@ -16,4 +16,4 @@ which py.test
 python -c "import mcvine"
 mcvine
 
-py.test -s
+PYTHONPATH=$PWD py.test -s
