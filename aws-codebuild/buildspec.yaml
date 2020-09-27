@@ -14,6 +14,9 @@ phases:
       - which git
       - which python
       - echo $PYTHON_VERSION
+      - echo $CODEBUILD_BUILD_NUMBER
+      - export JOB_NAME=systemtests-instruments
+      - export BUILD_NUMBER=$CODEBUILD_BUILD_NUMBER
       - ./aws-codebuild/install-conda.sh
       - ./aws-codebuild/install-mcvine.sh
   pre_build:
