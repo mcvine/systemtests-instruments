@@ -8,7 +8,8 @@ phases:
       - free -h
       - df -h
       - mount
-      - apt-get update && apt-get install -y procps freeglut3-dev libglu1-mesa unzip
+      - # apt-get update && apt-get install -y procps freeglut3-dev libglu1-mesa unzip
+      - yum install -y mesa-libGLU-devel unzip
       - pwd
       - ls -tl ./
       - which git
