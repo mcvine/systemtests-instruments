@@ -16,5 +16,8 @@ which py.test
 python -c "import mcvine"
 mcvine
 
-cd ./SEQ/singlecrystal-SpinWave/single_psi && make NCOUNT=1e6 BUFFER_SIZE=100000 NODES=5 SAMPLE_ANGLE=0 MS=0
-# PYTHONPATH=$PWD py.test -s
+_SRC_=$PWD
+cd ./SEQ/singlecrystal-SpinWave/single_psi \
+    && make NCOUNT=1e6 BUFFER_SIZE=100000 NODES=5 SAMPLE_ANGLE=0 MS=0 \
+    && cd $_SRC_ \
+    && PYTHONPATH=$PWD py.test -s
