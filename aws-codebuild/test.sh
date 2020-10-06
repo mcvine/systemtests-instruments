@@ -20,4 +20,4 @@ _SRC_=$PWD
 cd ./SEQ/singlecrystal-SpinWave/single_psi \
     && make NCOUNT=1e6 BUFFER_SIZE=100000 NODES=5 SAMPLE_ANGLE=0 MS=0 \
     && cd $_SRC_ \
-    && PYTHONPATH=$PWD py.test -s
+    && PYTHONPATH=$PWD py.test 
