@@ -4,7 +4,7 @@ import os, subprocess as sp, shlex
 
 def test():
     here = os.path.dirname(__file__) or '.'
-    print here
+    print(here)
     os.chdir(here)
     cmd = "bash run.sh"
     if os.system(cmd):
