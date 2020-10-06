@@ -29,11 +29,11 @@ event-nxs: sim_$(SAMPLE_ANGLE).nxs
 
 # nexus file comes from collecting scattered neutrons at the detector system
 sim_$(SAMPLE_ANGLE).nxs: out/scattered-neutrons
-	INSTRUMENT=$(INSTRUMENT) NODES=$(NODES) SAMPLE_ANGLE=$(SAMPLE_ANGLE) /usr/bin/time ./create-nxs >log.create-nxs 2>&1 || cat log.create-nxs
+	INSTRUMENT=$(INSTRUMENT) NODES=$(NODES) SAMPLE_ANGLE=$(SAMPLE_ANGLE) /usr/bin/time ./create-nxs >log.create-nxs 2>&1 || (cat log.create-nxs && exit 1)
 
 # scattered neutrons comes from simulation of scattering of incident beam by sample assembly
 out/scattered-neutrons: beam sampleassembly
-	NCOUNT=$(NCOUNT) BUFFER_SIZE=$(BUFFER_SIZE) NODES=$(NODES) SAMPLE_ANGLE=$(SAMPLE_ANGLE) ./scatter </dev/null >log.scatter 2>&1 || cat log.scatter
+	NCOUNT=$(NCOUNT) BUFFER_SIZE=$(BUFFER_SIZE) NODES=$(NODES) SAMPLE_ANGLE=$(SAMPLE_ANGLE) ./scatter </dev/null >log.scatter 2>&1 || (cat log.scatter && exit 1)
 
 scattering: out/scattered-neutrons
 
