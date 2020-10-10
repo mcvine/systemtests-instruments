@@ -24,15 +24,15 @@ branches:
 
 
 before_install:
-  - ./travis/before_install.sh
+  - ./builders/travis/before_install.sh
   - export PATH=/home/travis/mc/bin:$PATH
 
 install:
-  - ./travis/install.sh
+  - ./builders/travis/install.sh
 
 script:
-  - ./travis/getbeam.sh
-  - travis_wait 60 ./travis/run-tests.sh
+  - ./builders/travis/getbeam.sh
+  - travis_wait 60 ./builders/travis/run-tests.sh
 
 notifications:
   email:
