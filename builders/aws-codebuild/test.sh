@@ -18,6 +18,7 @@ mcvine
 
 export OMPI_ALLOW_RUN_AS_ROOT=1
 export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
+echo "localhost slots=5" > $(dirname $(dirname $(which python)))/etc/openmpi-default-hostfile
 
 _SRC_=$PWD
 cd ./SEQ/singlecrystal-SpinWave/single_psi \
