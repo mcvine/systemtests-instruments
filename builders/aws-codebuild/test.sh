@@ -2,8 +2,6 @@
 
 set -x
 set -e
-export OMPI_ALLOW_RUN_AS_ROOT=1
-export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
 export PATH=$HOME/mc/bin:$PATH
 source activate test
 
@@ -17,6 +15,9 @@ export LANG=C.UTF-8
 which py.test
 python -c "import mcvine"
 mcvine
+
+export OMPI_ALLOW_RUN_AS_ROOT=1
+export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
 
 _SRC_=$PWD
 cd ./SEQ/singlecrystal-SpinWave/single_psi \
